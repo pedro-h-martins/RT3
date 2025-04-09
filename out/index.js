@@ -1,19 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Subtrador = exports.Somador = void 0;
-class Somador {
-    constructor() {
-        this.calcular = (numero1, numero2) => {
-            return numero1 + numero2;
-        };
-    }
-}
-exports.Somador = Somador;
-class Subtrador {
-    constructor() {
-        this.calcular = (numero1, numero2) => {
-            return numero1 - numero2;
-        };
-    }
-}
-exports.Subtrador = Subtrador;
+const operacoesBasicas_1 = require("./modules/operacoesBasicas");
+const somar = new operacoesBasicas_1.Somador();
+const somado = somar.calcular(3, 2);
+const subtrair = new operacoesBasicas_1.Subtrador();
+const subtraido = subtrair.calcular(5, 4);
+const multiplicar = new operacoesBasicas_1.Multiplicador();
+const multiplicado = multiplicar.calcular(2, 8);
+const dividir = new operacoesBasicas_1.Divisor();
+const dividido = dividir.calcular(9, 3);
+console.log(`3 + 2 dará: ${somado}`);
+console.log(`5 - 4 dará: ${subtraido}`);
+console.log(`2 * 8 dará: ${multiplicado}`);
+console.log(`9 / 3 dará: ${dividido}`);
